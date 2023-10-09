@@ -1,0 +1,123 @@
+.main-container {
+    padding-bottom: 40px;
+}
+
+.question-button__container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 40px 0;;
+}
+
+.question-button__container a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 6px 13px;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.question-button__container a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.questions-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.questions-header__container h2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+}
+
+.questions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 60px 30px;
+    border-radius: 12px;
+    width: 50%;
+}
+
+.questions-container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.question-edit-delete {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.button, input.button.delete-button {
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input.button.delete-button:hover {
+    color: red;
+}
+
+.questions-container a {
+    text-decoration: none;
+    color: black;
+}
+
+dialog {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 0;
+}
+
+.edit-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.edit-question form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+@media (min-width: 991px) {
+    .question-button__container a {
+        position: fixed;
+    }
+}
+
