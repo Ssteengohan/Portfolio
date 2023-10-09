@@ -1,0 +1,189 @@
+.question {
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    border-radius: 12px;
+}
+
+.answer {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.answer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-answer {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 20px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.question-answer h5 {
+    margin: 0;
+    font-size: 9px;
+}
+
+
+.question-answer h5.answer-time {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 5px;
+    font-size: 9px;
+}
+
+.question-answer h5 span {
+    font-size: 8px;
+    opacity: 0.4;
+}
+
+.answer-user-info {
+    position: relative;
+}
+
+.question-delete-edit {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    gap: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.question-delete-edit button, .question-delete-edit input[type="submit"] {
+    font-size: 6px;
+    padding: 2px 4px;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+dialog form h4 {
+    text-align: center;
+}
+
+.like-container {
+    position: absolute;
+    left: -50px;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    width: 100%;
+}
+
+.like-container p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.like-container button {
+    background: none;
+    border: none;
+}
+
+svg {
+    height: 30px;
+    cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.answer-question {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 100%;
+    padding-bottom: 30px;
+    width: 80%;
+}
+
+.answer-question form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.answer-question form input[type="submit"]:hover {
+    font-weight: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
+@media (min-width:400px) {
+    .question-answer h5 {
+        font-size: 13px;
+    }
+    
+    .like-container {
+        gap: 0px;
+        left: -60px;
+    }   
+    
+    
+}
+
+@media (min-width:500px) {
+
+    .question-delete-edit button, .question-delete-edit input[type="submit"] {
+        font-size: 8px;
+        padding: 4px 8px;
+    }
+
+    svg {
+        height: 45px;
+        cursor: pointer;
+        transform: scaleX(-1);
+    }
+
+    .like-container {
+        gap: 10px;
+        left: -78px;
+    }   
+    
+    .like-container p {
+        font-size: 20px;
+    }
+
+    .answer-container {
+        padding: 20px 60px;
+        padding-left: 0;
+    }
+
+    .answer-question form {
+        gap: 20px;
+    }
+
+}
+@media (min-width:600px) {
+    .like-container {
+        gap: 10px;
+        left: -90px;
+    }   
+    
+}
