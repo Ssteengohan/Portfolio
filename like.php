@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-// Include your database connection
+//database connection
 require_once('sql/db.php');
 
-if (isset($_POST['like']) && isset($_POST['answer_id']) && isset($_SESSION['user_id'])) {
+if (isset($_POST['like']) && isset($_POST['answer_id']) && isset($_SESSION['user_id'])) {// like answer
     $answerId = $_POST['answer_id'];
     $userId = $_SESSION['user_id'];
 

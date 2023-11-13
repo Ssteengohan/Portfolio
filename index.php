@@ -1,18 +1,18 @@
 <?php
 session_start();
 
-// Include your database connection
+// database connection
 require_once('sql/db.php');
 
-// Set the server's timezone to Europe/Amsterdam
+// timezone to Europe/Amsterdam
 date_default_timezone_set('Europe/Amsterdam');
-
+// tag filter
 $tagFilter = '';
 if (isset($_GET['tag'])) {
     $tag = urldecode($_GET['tag']);
     $tagFilter = ' AND t.tag_name = :tag';
 }
-
+// query to get all questions
 $query = $pdo->prepare("SELECT q.id, q.title, q.question, q.posted_at, q.user_id, p.first_name, p.last_name,
                         GROUP_CONCAT(t.tag_name ORDER BY t.tag_name DESC SEPARATOR ', ') as tags 
                         FROM questions q 
@@ -28,10 +28,10 @@ if (isset($_GET['tag'])) {
     $query->bindParam(':tag', $tag);
 }
 
-$query->execute();
+$query->execute();// execute query
 $questions = $query->fetchAll(PDO::FETCH_ASSOC);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {// edit question
     $questionId = $_POST['question_id'];
     $newTitle = $_POST['subject'];
     $newDescription = $_POST['description'];
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {// delete question
     $questionIdToDelete = $_POST['question_id'];
 
     $stmt = $pdo->prepare("DELETE FROM questions WHERE id = :id");
