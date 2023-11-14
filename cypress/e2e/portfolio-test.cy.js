@@ -6,7 +6,7 @@ describe('Testing the website', () => {
     cy.visit(url);
     register();
     login();
-    
+    PostQuestion();   
   });
 
   function register() {
@@ -37,8 +37,13 @@ describe('Testing the website', () => {
   }
 
   function PostQuestion() {
-    
+    cy.get(".question-button__container > a").click();
+    cy.wait(1500);
+    cy.get("#subject").type("Test");
+    cy.get("#tag").type("Test");
+    cy.get("#description").type("Test");
+    cy.get('[type="submit"]').click();
   }
-
 })
+
 
